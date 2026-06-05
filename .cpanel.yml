@@ -1,0 +1,12 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/eleganta/inv.eleganta.id/
+
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R themes $DEPLOYPATH
+
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp data.php $DEPLOYPATH
+    - /bin/cp error.php $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
