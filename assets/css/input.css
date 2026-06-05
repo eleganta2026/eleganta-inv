@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+   --font-imperial: "Imperial Script", cursive;
+   --font-kaisei: "Kaisei Opti", serif;
+   --font-inria: "Inria Serif", serif;
+   --font-arabic: "Lateef", serif;
+}
+
+:root {
+    color-scheme: light;
+    forced-color-adjust: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.viewport {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas {
+    position: relative;
+
+    width: 414px;
+    height: 736px;
+
+    overflow: hidden;
+    flex-shrink: 0;
+
+    transform-origin: center center;
+}
+
+.canvas:not(.is-ready) .page-section {
+    transition: none !important;
+}
+
+.page-section {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translateX(100%);
+
+    transition:
+        transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.45s;
+}
+
+.page-section.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.page-section.exit-left {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}

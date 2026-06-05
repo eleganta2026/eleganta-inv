@@ -1,0 +1,15 @@
+{
+  "name": "eleganta-invitation",
+  "version": "1.0.0",
+  "description": "Engine undangan digital Eleganta",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/style.css --watch",
+    "build": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/style.css --minify"
+  },
+  "author": "Fadlullah Heri Farid",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0"
+  }
+}
