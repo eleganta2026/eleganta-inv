@@ -43,7 +43,7 @@
         alt="ornamen bunga kanan" />
 
     <img
-        src="<?= theme_asset($theme, 'img/hero/ornamen-bawah-sudut.webp') ?>"
+        src="<?= theme_asset($theme, 'img/ornamen-bawah-sudut.webp') ?>"
         class="absolute z-0 top-[453px] -left-[119px] w-[273px]"
         alt="ornamen bawah sudut kiri" />
 
@@ -53,7 +53,7 @@
         alt="ornamen bunga bawah kanan" />
 
     <img
-        src="<?= theme_asset($theme, 'img/hero/ornamen-bawah-sudut.webp') ?>"
+        src="<?= theme_asset($theme, 'img/ornamen-bawah-sudut.webp') ?>"
         class="absolute z-0 top-[453px] left-[254px] w-[273px] -scale-x-100"
         alt="ornamen bawah sudut kanan" />
 
@@ -63,9 +63,9 @@
         alt="ornamen bunga bawah kiri" />
 
     <img
-        src="<?= theme_asset($theme, 'img/hero/awan.webp') ?>"
+        src="<?= theme_asset($theme, 'img/awan.webp') ?>"
         class="absolute z-0 top-[254px] left-0 w-[701px] max-w-none"
-        alt="ornamen bunga bawah kiri" />
+        alt="awan" />
 
 
     <div class="absolute top-65.5 left-1/2 z-10 w-full -translate-x-1/2 px-4">

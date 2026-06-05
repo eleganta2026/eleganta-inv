@@ -17,6 +17,7 @@ function scaleCanvas() {
   if (screenWidth <= 320) {
     scale = Math.min(scaleX, scaleY);
   } else if (screenWidth <= 480) {
+    // scale = Math.min(scaleX, scaleY);
     scale = Math.max(scaleX, scaleY);
   } else {
     scale = scaleY;

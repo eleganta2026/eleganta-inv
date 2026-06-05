@@ -23,8 +23,8 @@ $weekdays = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
         alt="bunga atas" />
 
     <img
-        src="<?= theme_asset($theme, 'img/countdown/bg-bawah.webp') ?>"
-        class="absolute z-0 top-[637px] left-[21px] w-[485px] max-w-none"
+        src="<?= theme_asset($theme, 'img/bg-bawah.webp') ?>"
+        class="absolute z-0 top-[637px] -left-[21px] w-[485px] max-w-none"
         alt="bunga atas" />
 
     <img

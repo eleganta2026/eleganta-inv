@@ -64,17 +64,17 @@ return [
         'video_embed' => 'https://www.youtube.com/embed/dQw4w9WgXcQ',
 
         'sections' => [
-            // 'hero',
-            // 'quotes',
+            'hero',
+            'quotes',
             // 'couple',
             // 'story',
-            // 'gallery',
-            // 'video',
-            // 'event-detail',
+            'gallery',
+            'video',
+            'event-detail',
             'countdown',
             'maps',
             'gift',
-            'wishes',
+            // 'wishes',
             'closing',
         ],
 
