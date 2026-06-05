@@ -127,20 +127,41 @@ function goTo(index, axis = "x") {
   cur = index;
 }
 
+function canScrollInside(section, dy) {
+  if (!section) return false;
+
+  const scrollEl = section.querySelector(".section-scroll");
+
+  if (!scrollEl) return false;
+
+  const maxScrollTop = scrollEl.scrollHeight - scrollEl.clientHeight;
+
+  if (maxScrollTop <= 0) return false;
+
+  if (dy < 0) {
+    return scrollEl.scrollTop < maxScrollTop - 2;
+  }
+
+  if (dy > 0) {
+    return scrollEl.scrollTop > 2;
+  }
+
+  return false;
+}
+
 function handleSwipe(dx, dy) {
   if (!isOpened || isAnimating) return;
 
   resetIdleTimer();
 
-  const isHorizontal = Math.abs(dx) >= Math.abs(dy);
+  const activeSection = document.getElementById(sectionOrder[cur]);
 
-  if (isHorizontal) {
-    if (dx < -40) goTo(cur + 1, "x");
-    else if (dx > 40) goTo(cur - 1, "x");
-  } else {
-    if (dy < -40) goTo(cur + 1, "y");
-    else if (dy > 40) goTo(cur - 1, "y");
+  if (canScrollInside(activeSection, dy)) {
+    return;
   }
+
+  if (dy < -40) goTo(cur + 1, "y");
+  else if (dy > 40) goTo(cur - 1, "y");
 }
 
 function initFirstSection() {

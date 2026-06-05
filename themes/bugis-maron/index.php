@@ -27,7 +27,7 @@ if (!isset($data)) {
     <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-blue-200">
+<body>
     <div class="swipe-hint opacity-0 transition-opacity duration-500 pointer-events-none fixed inset-0 z-99999 flex justify-center">
         <div class="relative h-full w-full max-w-113.5">
             <video

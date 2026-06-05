@@ -8,7 +8,7 @@
         alt="bg bawah" />
 
     <img
-        src="<?= theme_asset($theme, 'img/gift/ornamen-abstrak-atas.webp') ?>"
+        src="<?= theme_asset($theme, 'img/ornamen-abstrak-atas.webp') ?>"
         class="absolute z-20 -top-[10px] -left-[10px] w-[445px] max-w-none"
         alt="ornamen abstrak atas" />
 
