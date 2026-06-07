@@ -15,6 +15,7 @@ $weekdays = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
 
 <section
     id="countdown"
+    data-bg="#6D1212"
     class="page-section relative h-full w-full text-center bg-[#6D1212]">
 
     <img
@@ -25,7 +26,7 @@ $weekdays = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
     <img
         src="<?= theme_asset($theme, 'img/bg-bawah.webp') ?>"
         class="absolute z-0 top-[637px] -left-[21px] w-[485px] max-w-none"
-        alt="bunga atas" />
+        alt="bg bawah" />
 
     <img
         src="<?= theme_asset($theme, 'img/ornamen-payung-besar.webp') ?>"

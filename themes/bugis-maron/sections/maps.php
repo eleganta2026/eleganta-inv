@@ -1,15 +1,15 @@
 <section
     id="maps"
+    data-viewport-bg="<?= theme_asset($theme, 'img/bg.webp') ?>"
     class="page-section relative h-full w-full">
-
-    <img
-        src="<?= theme_asset($theme, 'img/bg.webp') ?>"
-        class="absolute z-0 h-full w-full object-cover"
-        alt="bg" />
 
     <img
         src="<?= theme_asset($theme, 'img/bg-atas.webp') ?>"
         class="absolute z-0 top-0 left-0 w-[485px] max-w-none"
+        alt="bg atas" />
+    <img
+        src="<?= theme_asset($theme, 'img/bg-atas.webp') ?>"
+        class="absolute -z-10 -top-68 -left-10 w-[485px] max-w-none rotate-180"
         alt="bg atas" />
 
     <img

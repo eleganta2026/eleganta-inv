@@ -1,11 +1,12 @@
 <section
     id="gallery"
+    data-viewport-bg="<?= theme_asset($theme, 'img/bg.webp') ?>"
     class="page-section relative h-full w-full text-center">
 
-    <img
+    <!-- <img
         src="<?= theme_asset($theme, 'img/bg.webp') ?>"
-        class="absolute z-0 h-full w-full object-cover"
-        alt="bg" />
+        class="absolute z-0 h-screen w-full object-cover"
+        alt="bg" /> -->
 
     <img
         src="<?= theme_asset($theme, 'img/bunga-atas.webp') ?>"

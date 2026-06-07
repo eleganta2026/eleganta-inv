@@ -17,6 +17,7 @@
 
             <p class="font-inria font-bold text-[15px] leading-5">
                 Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara(i) berkenan hadir dan memberikan doa restu.
+                <br>
                 Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
             </p>
 

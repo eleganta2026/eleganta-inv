@@ -1,11 +1,8 @@
 <section
     id="hero"
+    data-bg="#CE9561"
+    data-viewport-bg="<?= theme_asset($theme, 'img/hero/bg.webp') ?>"
     class="page-section relative h-full w-full text-center">
-
-    <img
-        src="<?= theme_asset($theme, 'img/hero/bg.webp') ?>"
-        class="absolute z-0 h-full w-full object-cover"
-        alt="bg" />
 
     <img
         src="<?= theme_asset($theme, 'img/hero/ornamen-atas.webp') ?>"

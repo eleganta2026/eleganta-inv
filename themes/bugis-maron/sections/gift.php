@@ -1,5 +1,6 @@
 <section
     id="gift"
+    data-bg="#6D1212"
     class="page-section relative h-full w-full text-center bg-[#6D1212]">
 
     <img

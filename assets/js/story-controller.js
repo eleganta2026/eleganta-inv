@@ -2,7 +2,6 @@ let isOpened = false;
 let isAnimating = false;
 let cur = 0;
 
-let startX = 0;
 let startY = 0;
 
 let swipeHints = [];
@@ -49,7 +48,7 @@ function restartAnimations(section) {
   });
 }
 
-function goTo(index, axis = "x") {
+function goTo(index) {
   if (
     index < 0 ||
     index >= sectionOrder.length ||
@@ -73,23 +72,8 @@ function goTo(index, axis = "x") {
     return;
   }
 
-  const enterTransform =
-    axis === "y"
-      ? isNext
-        ? "translateY(100%)"
-        : "translateY(-100%)"
-      : isNext
-        ? "translateX(100%)"
-        : "translateX(-100%)";
-
-  const exitTransform =
-    axis === "y"
-      ? isNext
-        ? "translateY(-100%)"
-        : "translateY(100%)"
-      : isNext
-        ? "translateX(-100%)"
-        : "translateX(100%)";
+  const enterTransform = isNext ? "translateY(100%)" : "translateY(-100%)";
+  const exitTransform = isNext ? "translateY(-100%)" : "translateY(100%)";
 
   toEl.style.transition = "none";
   toEl.style.transform = enterTransform;
@@ -99,7 +83,7 @@ function goTo(index, axis = "x") {
   toEl.getBoundingClientRect();
 
   const transition =
-    "transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s";
+    "transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s";
 
   fromEl.style.transition = transition;
   fromEl.style.transform = exitTransform;
@@ -107,22 +91,33 @@ function goTo(index, axis = "x") {
   fromEl.style.pointerEvents = "none";
 
   toEl.style.transition = transition;
-  toEl.style.transform = axis === "y" ? "translateY(0%)" : "translateX(0%)";
+  toEl.style.transform = "translateY(0%)";
   toEl.style.opacity = "1";
   toEl.style.pointerEvents = "auto";
 
   toEl.classList.add("active");
-  restartAnimations(toEl);
+  updateViewportBg(toEl);
+  updateViewportBackground(toEl);
+  scaleCanvas(toEl);
 
-  fromEl.addEventListener(
-    "transitionend",
-    () => {
-      fromEl.classList.remove("active");
-      isAnimating = false;
-      resetIdleTimer();
-    },
-    { once: true },
-  );
+  let finished = false;
+
+  const finishTransition = () => {
+    if (finished) return;
+    finished = true;
+
+    fromEl.classList.remove("active");
+    restartAnimations(toEl);
+
+    isAnimating = false;
+    resetIdleTimer();
+  };
+
+  fromEl.addEventListener("transitionend", finishTransition, {
+    once: true,
+  });
+
+  setTimeout(finishTransition, 850);
 
   cur = index;
 }
@@ -149,7 +144,7 @@ function canScrollInside(section, dy) {
   return false;
 }
 
-function handleSwipe(dx, dy) {
+function handleSwipe(dy) {
   if (!isOpened || isAnimating) return;
 
   resetIdleTimer();
@@ -160,20 +155,23 @@ function handleSwipe(dx, dy) {
     return;
   }
 
-  if (dy < -40) goTo(cur + 1, "y");
-  else if (dy > 40) goTo(cur - 1, "y");
+  if (dy < -40) goTo(cur + 1);
+  else if (dy > 40) goTo(cur - 1);
 }
 
 function initFirstSection() {
   const first = document.getElementById(sectionOrder[0]);
   if (!first) return;
 
-  first.style.transform = "translateX(0%)";
+  first.style.transform = "translateY(0%)";
   first.style.opacity = "1";
   first.style.pointerEvents = "auto";
   first.classList.add("active");
 
+  updateViewportBg(first);
+  updateViewportBackground(first);
   restartAnimations(first);
+  scaleCanvas(first);
 }
 
 function initGestures(app) {
@@ -182,7 +180,6 @@ function initGestures(app) {
     (e) => {
       resetIdleTimer();
 
-      startX = e.touches[0].clientX;
       startY = e.touches[0].clientY;
     },
     { passive: true },
@@ -191,10 +188,9 @@ function initGestures(app) {
   app.addEventListener(
     "touchend",
     (e) => {
-      const endX = e.changedTouches[0].clientX;
       const endY = e.changedTouches[0].clientY;
 
-      handleSwipe(endX - startX, endY - startY);
+      handleSwipe(endY - startY);
     },
     { passive: true },
   );
@@ -202,12 +198,11 @@ function initGestures(app) {
   app.addEventListener("mousedown", (e) => {
     resetIdleTimer();
 
-    startX = e.clientX;
     startY = e.clientY;
   });
 
   app.addEventListener("mouseup", (e) => {
-    handleSwipe(e.clientX - startX, e.clientY - startY);
+    handleSwipe(e.clientY - startY);
   });
 }
 
@@ -216,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!app || sectionOrder.length === 0) return;
 
-  swipeHints = document.querySelectorAll(".swipe-hint");
+  swipeHints = Array.from(document.querySelectorAll(".swipe-hint"));
 
   initFirstSection();
   initGestures(app);
@@ -234,8 +229,12 @@ function openInvitation() {
   isOpened = true;
 
   if (cur < sectionOrder.length - 1) {
-    goTo(cur + 1, "y");
+    goTo(cur + 1);
   }
 
   resetIdleTimer();
 }
+
+window.addEventListener("beforeunload", () => {
+  clearTimeout(idleTimer);
+});

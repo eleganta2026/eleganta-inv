@@ -1,5 +1,6 @@
 <section
     id="video"
+    data-bg="#6D1212"
     class="page-section relative h-full w-full text-center bg-[#6D1212]">
 
     <img
@@ -46,4 +47,11 @@
         src="<?= theme_asset($theme, 'img/video/bunga-besar.webp') ?>"
         class="absolute z-0 top-[233px] left-[196px] w-[397px]"
         alt="bunga besar" />
+
+    <iframe
+        class="absolute top-1/2 left-1/2 w-[350px] aspect-[9/16] -translate-x-1/2 -translate-y-1/2 rounded-[20px]"
+        src="https://www.youtube.com/embed/mpineoNP23I"
+        title="Wedding Video"
+        allowfullscreen>
+    </iframe>
 </section>

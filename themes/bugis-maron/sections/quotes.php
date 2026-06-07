@@ -1,10 +1,11 @@
 <section
     id="quotes"
+    data-bg="#6D1212"
     class="page-section relative h-full w-full text-center bg-[#6D1212]">
 
     <img
         src="<?= theme_asset($theme, 'img/quotes/bg.webp') ?>"
-        class="absolute -top-[121px] -left-[28px] z-0 w-[481px] max-w-none"
+        class="absolute h-screen z-0 w-[481px] max-w-none"
         alt="bg" />
 
     <img

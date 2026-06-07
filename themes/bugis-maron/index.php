@@ -31,15 +31,6 @@ if (!isset($data)) {
     <div class="swipe-hint opacity-0 transition-opacity duration-500 pointer-events-none fixed inset-0 z-99999 flex justify-center">
         <div class="relative h-full w-full max-w-113.5">
             <video
-                class="absolute -top-1 left-1/2 -translate-x-1/2 w-25 rotate-180 -scale-x-100 object-cover"
-                autoplay
-                muted
-                loop
-                playsinline>
-                <source src="<?= theme_asset($theme, 'swipe.webm') ?>" type="video/webm">
-            </video>
-
-            <video
                 class="absolute top-1/2 -right-5 w-25 -translate-y-1/2 -rotate-90 -scale-x-100 object-cover"
                 autoplay
                 muted
@@ -51,7 +42,8 @@ if (!isset($data)) {
     </div>
 
     <div id="viewport" class="viewport">
-        <main id="app" class="canvas bg-white">
+        <div id="viewportBg" class="viewport-bg"></div>
+        <main id="app" class="canvas">
             <?php
             $sections = $data['sections'] ?? [
                 'hero',
@@ -86,6 +78,7 @@ if (!isset($data)) {
     <script src="<?= inv_asset('js/canvas-scaler.js') ?>"></script>
     <script src="<?= inv_asset('js/story-controller.js') ?>"></script>
     <script src="<?= inv_asset('js/countdown.js') ?>"></script>
+    <script src="<?= inv_asset('js/viewport.js') ?>"></script>
 
     <!-- Hapus Setelah Production -->
     <script src="<?= theme_asset($theme, 'js/env.js') ?>"></script>
