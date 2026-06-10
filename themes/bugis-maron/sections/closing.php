@@ -11,21 +11,21 @@
 
     <div class="absolute top-[250px] left-1/2 -translate-x-1/2 z-20">
         <div class="flex flex-col items-center justify-center gap-8 text-[#FFE9D2] font-inria leading-none mt-[28px] w-[300px] mx-auto">
-            <p class="font-imperial text-[48px] mt-12 text-center">
+            <p class="font-imperial text-[48px] mt-12 text-center animate-text-from-left">
                 Terima Kasih
             </p>
 
-            <p class="font-inria font-bold text-[15px] leading-5">
+            <p class="font-inria font-bold text-[15px] leading-5 animate-text-from-right">
                 Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara(i) berkenan hadir dan memberikan doa restu.
                 <br>
                 Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
             </p>
 
-            <p class="font-kaisei text-[15px]">
+            <p class="font-kaisei text-[15px] animate-text-from-left">
                 KAMI YANG BERBAHAGIA
             </p>
 
-            <p class="font-imperial text-[48px]">
+            <p class="font-imperial text-[48px] animate-text-from-right">
                 Iqbal & Fika
             </p>
         </div>

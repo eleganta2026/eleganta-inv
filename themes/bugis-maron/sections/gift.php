@@ -10,40 +10,45 @@
 
     <img
         src="<?= theme_asset($theme, 'img/ornamen-abstrak-atas.webp') ?>"
-        class="absolute z-20 -top-[10px] -left-[10px] w-[445px] max-w-none"
+        class="absolute z-20 -top-[10px] -left-[10px] w-[445px] max-w-none animate-ornament-from-top"
         alt="ornamen abstrak atas" />
 
-    <img
-        src="<?= theme_asset($theme, 'img/ornamen-payung-besar.webp') ?>"
-        class="absolute z-20 top-[390px] -left-[195px] w-[546px] rotate-[20deg] max-w-none"
-        alt="ornamen payung besar" />
+    <div class="absolute z-20 top-[390px] -left-[195px] animate-ornament-from-bottom-left">
+        <img
+            src="<?= theme_asset($theme, 'img/ornamen-payung-besar.webp') ?>"
+            class="w-[546px] rotate-[20deg] max-w-none animate-pulse-umbrella"
+            alt="ornamen payung besar" />
+    </div>
 
-    <img
-        src="<?= theme_asset($theme, 'img/gift/kado.webp') ?>"
-        class="absolute z-20 top-[500px] left-[180px] w-[268px] max-w-none"
-        alt="kado" />
-
+    <div class="absolute z-20 top-[500px] left-[180px] animate-ornament-from-bottom-right">
+        <img
+            src="<?= theme_asset($theme, 'img/gift/kado.webp') ?>"
+            class="w-[268px] max-w-none animate-pulse-umbrella"
+            alt="kado" />
+    </div>
 
     <div class="absolute top-[98px] left-1/2 -translate-x-1/2 z-10 w-[378px] h-[569px] bg-[#FFE9C7] rounded-t-[62px] overflow-hidden">
-        <p class="font-kolker text-[48px] text-[#6D1212] mt-12 text-center">
+        <p class="font-kolker text-[48px] text-[#6D1212] mt-12 text-center animate-text-from-top">
             Wedding Gift
         </p>
 
-        <div class="w-[333px] border-t-1 border-[#6D1212] absolute top-[112px] left-1/2 -translate-x-1/2"></div>
+        <div class="w-[333px] border-t-1 border-[#6D1212] absolute top-[112px] left-1/2 -translate-x-1/2 animate-text-from-top"></div>
 
-        <div class="flex flex-col items-center justify-center gap-8 text-[#6D1212] font-inria leading-none mt-[28px] w-[300px] mx-auto">
+        <div class="flex flex-col items-center justify-center gap-8 text-[#6D1212] font-inria leading-none mt-[28px] w-[300px] mx-auto animate-text-from-bottom">
             <p class="font-bold text-[15px] leading-5">
                 Terima kasih telah menambah semangat kegembiraan pernikahan kami dengan kehadiran
                 dan hadiah indah Anda.
             </p>
 
-            <div class="flex justify-between gap-10">
-                <button
-                    id="btnCashless"
-                    class="bg-[#6D1212] font-inria text-[13px] font-bold text-[#FFC8AA] w-[110px] py-2.5 rounded-[10px]">? Cashless</button>
-                <button
-                    id="btnSendGift"
-                    class="bg-[#6D1212] font-inria text-[13px] font-bold text-[#FFC8AA] w-[110px] py-2.5 rounded-[10px]">? Kirim Kado</button>
+            <div class="animate-pulse-button">
+                <div class="flex justify-between gap-10">
+                    <button
+                        id="btnCashless"
+                        class="bg-[#6D1212] font-inria text-[13px] font-bold text-[#FFC8AA] w-[110px] py-2.5 rounded-[10px]">? Cashless</button>
+                    <button
+                        id="btnSendGift"
+                        class="bg-[#6D1212] font-inria text-[13px] font-bold text-[#FFC8AA] w-[110px] py-2.5 rounded-[10px]">? Kirim Kado</button>
+                </div>
             </div>
 
             <div id="cashless" class="hidden justify-between items-center gap-4">
@@ -58,7 +63,7 @@
                         BCA
                     </p>
 
-                    <button class="bg-[#6D1212] font-inria text-[12px] font-bold text-[#FFC8AA] px-2 py-2.5 rounded-[10px] mt-2">Salin Rekening</button>
+                    <button class="bg-[#6D1212] font-inria text-[12px] font-bold text-[#FFC8AA] px-2 py-2.5 rounded-[10px] mt-2 animate-pulse-button">Salin Rekening</button>
                 </div>
             </div>
 
@@ -96,5 +101,4 @@
             class="absolute -z-10 bottom-0 h-full"
             alt="bg kertas" />
     </div>
-
 </section>

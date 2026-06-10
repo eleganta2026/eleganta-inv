@@ -16,7 +16,9 @@ if (!isset($data)) {
 
     <link rel="stylesheet" href="<?= inv_asset('css/style.css') ?>">
 
-    <link rel="stylesheet" href="<?= theme_asset($theme, 'css/animations.css') ?>" />
+    <link rel="stylesheet" href="<?= theme_asset($theme, 'css/keyframes.css') ?>">
+    <link rel="stylesheet" href="<?= theme_asset($theme, 'css/scroll.css') ?>">
+    <link rel="stylesheet" href="<?= theme_asset($theme, 'css/swipe.css') ?>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

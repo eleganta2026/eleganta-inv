@@ -96,6 +96,7 @@ function goTo(index) {
   toEl.style.pointerEvents = "auto";
 
   toEl.classList.add("active");
+  initScrollAnimations(toEl);
   updateViewportBg(toEl);
   updateViewportBackground(toEl);
   scaleCanvas(toEl);
@@ -206,6 +207,38 @@ function initGestures(app) {
   });
 }
 
+function initScrollAnimations(section) {
+  if (!section || section.dataset.scrollReady === "true") return;
+
+  const scrollSection = section.querySelector(".section-scroll");
+  if (!scrollSection) return;
+
+  const items = scrollSection.querySelectorAll('[class*="scroll-"]');
+
+  items.forEach((item) => {
+    const threshold = parseFloat(item.dataset.threshold || "0.2");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        root: scrollSection,
+        threshold,
+      },
+    );
+
+    observer.observe(item);
+  });
+
+  section.dataset.scrollReady = "true";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const app = document.getElementById("app");
 
@@ -215,6 +248,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initFirstSection();
   initGestures(app);
+
+  initScrollAnimations(document.getElementById(sectionOrder[0]));
 
   requestAnimationFrame(() => {
     app.classList.add("is-ready");

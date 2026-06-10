@@ -5,7 +5,7 @@
 
         <img
             src="<?= theme_asset($theme, 'img/wishes/ornamen-abstrak-atas.webp') ?>"
-            class="absolute z-20 -top-[9px] -left-[9px] w-[445px] max-w-none"
+            class="absolute z-20 -top-[9px] -left-[9px] w-[445px] max-w-none scroll-ornament-from-top"
             alt="ornamen abstrak atas" />
 
         <img
@@ -18,21 +18,25 @@
             class="absolute z-0 w-[654px] h-[1214px] max-w-none max-h-none -bottom-170"
             alt="bg" />
 
-        <img
-            src="<?= theme_asset($theme, 'img/bunga-atas.webp') ?>"
-            class="absolute z-10 -left-[20px] -bottom-170 w-[464px] max-w-none scale-y-[-1] scale-x-[-1] opacity-44"
-            alt="bunga atas" />
+        <div
+            style="--delay: 0s;"
+            class="absolute z-10 -left-[20px] -bottom-170 w-[445px] h-[190px] overflow-hidden scroll-ornament-from-bottom">
+            <img
+                src="<?= theme_asset($theme, 'img/bunga-atas.webp') ?>"
+                class="w-[464px] max-w-none scale-y-[-1] scale-x-[-1] opacity-44"
+                alt="bunga atas" />
+        </div>
 
         <div class="absolute top-[50px] left-1/2 -translate-x-1/2 z-10 w-[340px]">
-            <p class="font-kaisei text-[38px] text-[#6D1212] mt-12 text-left">
+            <p class="font-kaisei text-[38px] text-[#6D1212] mt-12 text-left scroll-text-from-left">
                 RSVP &
             </p>
-            <p class="font-kolker text-[48px] text-[#6D1212] text-left -mt-7">
+            <p class="font-kolker text-[48px] text-[#6D1212] text-left -mt-7 scroll-text-from-left">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 Best Wishes
             </p>
 
-            <form class="mx-2 font-inria space-y-4">
+            <form class="mx-2 font-inria space-y-4 scroll-text-from-bottom">
                 <div>
                     <input
                         class="border-2 border-[#6D1212] rounded-[9px] w-full bg-[#FFE9D2] px-3 py-1.5"
@@ -93,11 +97,11 @@
             </form>
 
             <div class="mx-2 space-y-4 mt-10">
-                <p class="font-kaisesi font-bold text-[23px]">
+                <p class="font-kaisesi font-bold text-[23px] scroll-text-from-top">
                     Attendance
                 </p>
 
-                <div class="flex justify-between mx-2 font-inria">
+                <div class="flex justify-between mx-2 font-inria scroll-text-from-bottom">
                     <div class="w-[70px] text-center">
                         <div class="flex h-[50px] items-center justify-center rounded-[9px] bg-[#6D1212]">
                             <p class="text-[24px] font-bold text-[#FFC8AA]">
@@ -137,7 +141,9 @@
 
                 <div class="bg-white/50 rounded-[9px] p-2 space-y-3 mt-6">
 
-                    <div class="bg-[#CCB295]/40 rounded-[9px] p-1">
+                    <div
+                        style="--delay: 0s;"
+                        class="bg-[#CCB295]/40 rounded-[9px] p-1 scroll-text-from-bottom">
                         <div class="flex justify-between items-start">
                             <div class="flex items-center gap-1.5">
                                 <div>
@@ -174,7 +180,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-[#CCB295]/40 rounded-[9px] p-1">
+                    <div
+                        style="--delay: 0s;"
+                        class="bg-[#CCB295]/40 rounded-[9px] p-1 scroll-text-from-bottom">
                         <div class="flex justify-between items-start">
                             <div class="flex items-center gap-1.5">
                                 <div>
@@ -211,7 +219,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-[#CCB295]/40 rounded-[9px] p-1">
+                    <div
+                        style="--delay: 0s;"
+                        class="bg-[#CCB295]/40 rounded-[9px] p-1 scroll-text-from-bottom">
                         <div class="flex justify-between items-start">
                             <div class="flex items-center gap-1.5">
                                 <div>
@@ -248,7 +258,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-[#CCB295]/40 rounded-[9px] p-1">
+                    <div
+                        style="--delay: 0s;"
+                        class="bg-[#CCB295]/40 rounded-[9px] p-1 scroll-text-from-bottom">
                         <div class="flex justify-between items-start">
                             <div class="flex items-center gap-1.5">
                                 <div>
@@ -285,7 +297,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-[#CCB295]/40 rounded-[9px] p-1">
+                    <div
+                        style="--delay: 0s;"
+                        class="bg-[#CCB295]/40 rounded-[9px] p-1 scroll-text-from-bottom">
                         <div class="flex justify-between items-start">
                             <div class="flex items-center gap-1.5">
                                 <div>
@@ -321,10 +335,9 @@
                             Happy Wedding Kak Iqbal Ganteng, Sakinah Mawadah Warahmah
                         </div>
                     </div>
-
                 </div>
 
-                <div class="mt-2 flex items-center justify-center gap-1.5 font-inria">
+                <div class="mt-2 flex items-center justify-center gap-1.5 font-inria scroll-text-from-bottom">
                     <button class="rounded-[6px] bg-[#CCB295]/40 px-2 py-1 text-[12px] text-[#574A4A]">
                         Prev
                     </button>

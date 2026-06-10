@@ -1,0 +1,98 @@
+.scroll-ornament-from-top-left,
+.scroll-ornament-from-bottom-left,
+.scroll-ornament-from-bottom-right,
+.scroll-ornament-from-top,
+.scroll-ornament-from-bottom,
+.scroll-ornament-from-left,
+.scroll-ornament-from-right,
+.scroll-photo-from-left,
+.scroll-photo-from-right,
+.scroll-content-from-left,
+.scroll-content-from-right,
+.scroll-ornament-zoom-in-umbrella {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-text-from-top,
+.scroll-text-from-bottom,
+.scroll-text-from-left,
+.scroll-text-from-right {
+    opacity: 0;
+}
+
+.scroll-ornament-from-top-left.is-visible {
+    visibility: visible;
+    animation: ornamentSlideFromTopLeft 1s ease-out var(--delay, 0.75s) forwards;
+}
+
+.scroll-ornament-from-bottom-left.is-visible {
+    visibility: visible;
+    animation: ornamentSlideFromBottomLeft 1s ease-out var(--delay, 0.75s) forwards;
+}
+
+.scroll-ornament-from-bottom-right.is-visible {
+    visibility: visible;
+    animation: ornamentSlideFromBottomRight 1s ease-out var(--delay, 0.75s) forwards;
+}
+
+.scroll-ornament-from-top.is-visible {
+    visibility: visible;
+    animation: ornamentSlideFromTop 1s ease-out var(--delay, 0.75s) forwards;
+}
+
+.scroll-ornament-from-bottom.is-visible {
+    visibility: visible;
+    animation: ornamentSlideFromBottom 1s ease-out var(--delay, 0.75s) forwards;
+}
+
+.scroll-ornament-from-left.is-visible {
+    visibility: visible;
+    animation: ornamentSlideFromLeft 1s ease-out var(--delay, 0.75s) forwards;
+}
+
+.scroll-ornament-from-right.is-visible {
+    visibility: visible;
+    animation: ornamentSlideFromRight 1s ease-out var(--delay, 0.75s) forwards;
+}
+
+.scroll-photo-from-left.is-visible {
+    visibility: visible;
+    animation: photoSlideFromLeft 1s ease-out var(--delay, 0.5s) forwards;
+}
+
+.scroll-photo-from-right.is-visible {
+    visibility: visible;
+    animation: photoSlideFromRight 1s ease-out var(--delay, 0.5s) forwards;
+}
+
+.scroll-content-from-left.is-visible {
+    visibility: visible;
+    animation: contentSlideFromLeft 1.5s ease-out var(--delay, 0.5s) forwards;
+}
+
+.scroll-content-from-right.is-visible {
+    visibility: visible;
+    animation: contentSlideFromRight 1.5s ease-out var(--delay, 0.5s) forwards;
+}
+
+.scroll-ornament-zoom-in-umbrella.is-visible {
+    visibility: visible;
+    animation: zoomInUmbrella 0.8s ease-out var(--delay, 0.8s) forwards;
+}
+
+.scroll-text-from-top.is-visible {
+    animation: textSlideFromTop 1s ease-out var(--delay, 1s) forwards;
+}
+
+.scroll-text-from-bottom.is-visible {
+    animation: textSlideFromBottom 1s ease-out var(--delay, 1s) forwards;
+}
+
+.scroll-text-from-left.is-visible {
+    animation: textSlideFromLeft 1s ease-out var(--delay, 1s) forwards;
+}
+
+.scroll-text-from-right.is-visible {
+    animation: textSlideFromRight 1s ease-out var(--delay, 1s) forwards;
+}

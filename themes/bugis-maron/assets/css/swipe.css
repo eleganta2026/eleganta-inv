@@ -1,0 +1,256 @@
+/* =========================
+   ORNAMENT, FOTO, MAP
+   ========================= */
+
+.animate-ornament-from-top-left,
+.animate-ornament-from-top-right,
+.animate-ornament-from-bottom-left,
+.animate-ornament-from-bottom-right,
+.animate-ornament-from-bottom-left-custom,
+.animate-ornament-from-bottom-right-custom,
+.animate-ornament-from-top,
+.animate-ornament-from-bottom,
+.animate-ornament-from-left,
+.animate-ornament-from-right,
+.animate-photo-from-top,
+.animate-photo-from-left,
+.animate-photo-from-top-custom,
+.animate-photo-from-bottom-custom,
+.animate-photo-from-left-custom,
+.animate-photo-from-right-custom,
+.animate-photo-zoom-in-custom,
+.animate-ornament-zoom-in-ornament,
+.animate-ornament-zoom-in-umbrella,
+.animate-zoom-in-map {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* =========================
+   TEXT
+   ========================= */
+
+.animate-text-from-top,
+.animate-text-from-bottom,
+.animate-text-from-left,
+.animate-text-from-right {
+    opacity: 0;
+}
+
+/* =========================
+   ORNAMENT ANIMATIONS
+   ========================= */
+
+.page-section.active .animate-ornament-from-top-left {
+    visibility: visible;
+    animation: ornamentSlideFromTopLeft 1s ease-out 0.75s forwards;
+}
+
+.page-section.active .animate-ornament-from-top-right {
+    visibility: visible;
+    animation: ornamentSlideFromTopRight 1s ease-out 0.75s forwards;
+}
+
+.page-section.active .animate-ornament-from-bottom-left {
+    visibility: visible;
+    animation: ornamentSlideFromBottomLeft 1s ease-out 0.75s forwards;
+}
+
+.page-section.active .animate-ornament-from-bottom-right {
+    visibility: visible;
+    animation: ornamentSlideFromBottomRight 1s ease-out 0.75s forwards;
+}
+
+.page-section.active .animate-ornament-from-bottom-left-custom {
+    visibility: visible;
+    animation: ornamentSlideFromBottomLeftCustom 1s ease-out 0.75s forwards;
+}
+
+.page-section.active .animate-ornament-from-bottom-right-custom {
+    visibility: visible;
+    animation: ornamentSlideFromBottomRightCustom 1s ease-out 0.75s forwards;
+}
+
+.page-section.active .animate-ornament-from-top {
+    visibility: visible;
+    animation: ornamentSlideFromTop 1s ease-out 0.75s forwards;
+}
+
+.page-section.active .animate-ornament-from-bottom {
+    visibility: visible;
+    animation: ornamentSlideFromBottom 1s ease-out 0.75s forwards;
+}
+
+.page-section.active .animate-ornament-from-left {
+    visibility: visible;
+    animation: ornamentSlideFromLeft 1s ease-out 0.75s forwards;
+}
+
+.page-section.active .animate-ornament-from-right {
+    visibility: visible;
+    animation: ornamentSlideFromRight 1s ease-out 0.75s forwards;
+}
+
+.page-section.active .animate-photo-from-top {
+    visibility: visible;
+    animation: photoSlideFromTop 1s ease-out 0.5s forwards;
+}
+
+.page-section.active .animate-photo-from-left {
+    visibility: visible;
+    animation: photoSlideFromLeft 1s ease-out 0.5s forwards;
+}
+
+/* =========================
+   SWAY
+   ========================= */
+
+.page-section.active .animate-sway-top-left {
+    transform-origin: top left;
+    animation: swayLeft 5s ease-in-out 1.5s infinite;
+}
+
+.page-section.active .animate-sway-top-right {
+    transform-origin: top right;
+    animation: swayRight 5s ease-in-out 1.5s infinite;
+}
+
+.page-section.active .animate-sway-bottom-left {
+    transform-origin: bottom left;
+    animation: swayLeft 5s ease-in-out 1.5s infinite;
+}
+
+.page-section.active .animate-sway-bottom-right {
+    transform-origin: bottom right;
+    animation: swayRight 5s ease-in-out 1.5s infinite;
+}
+
+.page-section.active .animate-sway-left {
+    transform-origin: center left;
+    animation: swayLeft 5s ease-in-out 1.5s infinite;
+}
+
+.page-section.active .animate-sway-right {
+    transform-origin: center right;
+    animation: swayRight 5s ease-in-out 1.5s infinite;
+}
+
+.page-section.active .animate-sway-top {
+    transform-origin: top center;
+    animation: swayLeft 5s ease-in-out 1.5s infinite;
+}
+
+.page-section.active .animate-sway-bottom {
+    transform-origin: bottom center;
+    animation: swayRight 5s ease-in-out 1.5s infinite;
+}
+
+.page-section.active .animate-sway-center {
+    transform-origin: center center;
+    animation: swayLeft 5s ease-in-out 1.5s infinite;
+}
+
+/* =========================
+   TEXT ANIMATIONS
+   ========================= */
+
+.page-section.active .animate-text-from-top {
+    animation: textSlideFromTop 1s ease-out 1s forwards;
+}
+
+.page-section.active .animate-text-from-bottom {
+    animation: textSlideFromBottom 1s ease-out 1s forwards;
+}
+
+.page-section.active .animate-text-from-left {
+    animation: textSlideFromLeft 1s ease-out 1s forwards;
+}
+
+.page-section.active .animate-text-from-right {
+    animation: textSlideFromRight 1s ease-out 1s forwards;
+}
+
+/* =========================
+   Pulse
+   ========================= */
+
+.page-section.active .animate-pulse-button {
+    animation: pulseButton 1.8s ease-in-out 1.8s infinite;
+}
+
+.page-section.active .animate-pulse-ornament {
+    animation: pulseOrnament 3s ease-in-out 3s infinite;
+}
+
+.page-section.active .animate-pulse-umbrella {
+    animation: pulseUmbrella 1.8s ease-in-out 1.8s infinite;
+}
+
+.page-section.active .animate-pulse-pin-map {
+    animation: pulsePinMap 1.8s ease-in-out 1.8s infinite;
+}
+
+/* =========================
+   ZoomIn
+   ========================= */
+
+.page-section.active .animate-ornament-zoom-in-ornament {
+    visibility: visible;
+    animation: zoomInOrnament 1.5s ease-out 1.5s forwards;
+}
+
+.page-section.active .animate-ornament-zoom-in-umbrella {
+    visibility: visible;
+    animation: zoomInUmbrella 0.8s ease-out 0.8s forwards;
+}
+
+.page-section.active .animate-zoom-in-map {
+    visibility: visible;
+    animation: zoomInMaps 1s ease-out 1s forwards;
+}
+
+/* =========================
+   MAP
+   ========================= */
+
+.page-section.active .animate-map-tiltX {
+    transform-origin: center center;
+    animation: mapTiltX 10s ease-in-out 1.5s infinite;
+}
+
+/* =========================
+   CLOUD
+   ========================= */
+
+.page-section.active .animate-cloud {
+    animation: cloudMove 15s ease-in-out infinite;
+}
+
+/* =========================
+   Gallery
+   ========================= */
+
+.page-section.active .animate-photo-from-top-custom {
+    visibility: visible;
+    animation: photoSlideFromTop 1.5s ease-out 1.5s forwards;
+}
+
+.page-section.active .animate-photo-from-bottom-custom {
+    visibility: visible;
+    animation: photoSlideFromBottom 1.5s ease-out 1.5s forwards;
+}
+
+.page-section.active .animate-photo-from-left-custom {
+    visibility: visible;
+    animation: photoSlideFromLeft 1.5s ease-out var(--delay, 0.5s) forwards;
+}
+
+.page-section.active .animate-photo-from-right-custom {
+    visibility: visible;
+    animation: photoSlideFromRight 1.5s ease-out var(--delay, 0.5s) forwards;
+}
+
+.page-section.active .animate-photo-zoom-in-custom {
+    visibility: visible;
+    animation: zoomInPhoto 1.5s ease-out var(--delay, 1.5s) forwards;
+}

@@ -1,7 +1,7 @@
 <?php
 $undangan = require __DIR__ . '/data.php';
 
-define('INV_BASE_URL', 'http://localhost/inv');
+define('INV_BASE_URL', 'http://10.153.138.196/inv');
 
 function inv_asset(string $path = ''): string
 {
