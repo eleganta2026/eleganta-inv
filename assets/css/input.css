@@ -35,19 +35,62 @@ body {
     justify-content: center;
 }
 
-.viewport-bg {
+.viewport-bg,
+.viewport-overlay {
     position: absolute;
-    z-index: 0;
-
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-
     pointer-events: none;
 }
 
+.viewport-bg {
+    z-index: 0;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.viewport-overlay {
+    z-index: 1;
+}
+
+#cover {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+
+    overflow: hidden;
+    text-align: center;
+
+    opacity: 1;
+    pointer-events: auto;
+
+    transform: translateY(0);
+    will-change: transform;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-frame {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+}
+
 @media (max-width: 480px) {
-    .viewport-bg {
+    .cover-frame {
+        width: 100%;
+        height: 100%;
+    }
+
+    .viewport-bg,
+    .viewport-overlay {
         inset: 0;
         width: 100%;
         height: 100%;
@@ -55,7 +98,16 @@ body {
 }
 
 @media (min-width: 481px) {
-    .viewport-bg {
+    .cover-frame {
+        width: 414px;
+        height: 736px;
+
+        transform: scale(var(--canvas-scale, 1));
+        transform-origin: center center;
+    }
+
+    .viewport-bg,
+    .viewport-overlay {
         left: 50%;
         top: 50%;
 
@@ -69,13 +121,16 @@ body {
 
 .canvas {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
     width: 414px;
     height: 736px;
 
     overflow: hidden;
     flex-shrink: 0;
+
+    opacity: 0;
+    pointer-events: none;
 
     transform-origin: center center;
 }
@@ -96,7 +151,7 @@ body {
     opacity: 0;
     pointer-events: none;
 
-    transform: translateX(100%);
+    transform: translateY(100%);
 
     transition:
         transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
@@ -106,7 +161,7 @@ body {
 .page-section.active {
     opacity: 1;
     pointer-events: auto;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 .section-scroll {
@@ -134,7 +189,11 @@ img {
     user-select: none;
     -webkit-user-drag: none;
 }
-
+/*
+  Dipakai oleh canvas-scaler.js.
+  Class ini aktif saat section memiliki .section-scroll
+  pada layar mobile, supaya canvas aman untuk konten yang bisa discroll.
+*/
 body.is-scroll-section .canvas {
     overflow: hidden;
 }
@@ -147,7 +206,11 @@ body.is-scroll-section .section-scroll {
     height: 100%;
     padding-bottom: env(safe-area-inset-bottom);
 }
-
+/*
+  Dipakai oleh canvas-scaler.js.
+  Class ini aktif pada layar mobile tinggi untuk mengizinkan
+  ornamen atas/bawah keluar dari batas canvas.
+*/
 body.allow-overflow .viewport {
     overflow: visible;
 }

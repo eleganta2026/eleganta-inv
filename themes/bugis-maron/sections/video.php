@@ -82,7 +82,7 @@
     </div>
 
     <iframe
-        class="absolute top-1/2 left-1/2 w-[320px] aspect-[9/16] -translate-x-1/2 -translate-y-1/2 rounded-[20px] animate-zoom-in-map"
+        class="absolute top-1/2 left-1/2 w-[320px] aspect-[9/16] -translate-x-1/2 -translate-y-1/2 rounded-[20px] animate-zoom-in-video"
         src="https://www.youtube.com/embed/mpineoNP23I"
         title="Wedding Video"
         allowfullscreen>

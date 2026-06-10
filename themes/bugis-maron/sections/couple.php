@@ -1,6 +1,7 @@
 <section
     id="couple"
-    class="page-section relative h-full w-full text-center">
+    data-bg="#6D1212"
+    class="page-section relative h-full w-full text-center bg-[#6D1212]">
     <div class="section-scroll">
 
         <img
@@ -76,7 +77,7 @@
             <div class="flex justify-end mt-[170px] gap-5">
                 <div
                     data-threshold="0.5"
-                    style="--delay: 0s;"
+                    style="--delay: 1s;"
                     class="text-right -mt-3 scroll-text-from-left">
                     <p
                         class="font-kaisei font-bold text-[24px] leading-[27px]">

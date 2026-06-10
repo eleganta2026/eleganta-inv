@@ -45,6 +45,16 @@ if (!isset($data)) {
 
     <div id="viewport" class="viewport">
         <div id="viewportBg" class="viewport-bg"></div>
+        <div id="viewportOverlay" class="viewport-overlay"></div>
+
+        <?php
+        $coverFile = __DIR__ . "/sections/cover.php";
+
+        if (file_exists($coverFile)) {
+            include $coverFile;
+        }
+        ?>
+
         <main id="app" class="canvas">
             <?php
             $sections = $data['sections'] ?? [

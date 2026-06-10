@@ -21,7 +21,8 @@
 .animate-photo-zoom-in-custom,
 .animate-ornament-zoom-in-ornament,
 .animate-ornament-zoom-in-umbrella,
-.animate-zoom-in-map {
+.animate-zoom-in-map,
+.animate-zoom-in-video {
     opacity: 0;
     visibility: hidden;
 }
@@ -207,6 +208,11 @@
 .page-section.active .animate-zoom-in-map {
     visibility: visible;
     animation: zoomInMaps 1s ease-out 1s forwards;
+}
+
+.page-section.active .animate-zoom-in-video {
+    visibility: visible;
+    animation: zoomInVideo 1s ease-out 1s forwards;
 }
 
 /* =========================

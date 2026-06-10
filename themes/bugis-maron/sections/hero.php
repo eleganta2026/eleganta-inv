@@ -16,7 +16,7 @@
 
     <img
         src="<?= theme_asset($theme, 'img/hero/ornamen-besar.webp') ?>"
-        class="absolute z-0 -top-[69px] -left-[53px] w-[546px] max-w-none"
+        class="absolute z-0 -top-[69px] -left-[53px] w-[546px] max-w-none animate-ornament-from-right"
         alt="ornamen besar" />
 
     <img
@@ -85,11 +85,5 @@
         <p class="font-inria font-bold text-[18px] mx-auto max-w-[240px] text-[#6D1212] mt-2.5">
             Fadlullah Heri Farid S.Kom.
         </p>
-
-        <button id="openInvitationBtn"
-            onclick="openInvitation()"
-            class="font-inria font-bold text-[16px] text-white w-43 h-10.5 bg-linear-to-r from-[#4E0606] to-[#BE1515] rounded-[15px] mt-5">
-            OPEN INVITATION
-        </button>
     </div>
 </section>

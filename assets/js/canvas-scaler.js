@@ -92,19 +92,9 @@ function scaleCanvas(currentSection = null) {
     canvas.style.transform = `translate(-50%, -50%) scale(${scale})`;
     canvas.style.transformOrigin = "center center";
   }
-
-  console.log({
-    width: screenWidth,
-    height: screenHeight,
-    scaleX,
-    scaleY,
-    ratio: screenHeight / screenWidth,
-    hasScrollSection: !!activeScrollSection,
-    isScrollSection,
-  });
 }
 
-document.addEventListener("DOMContentLoaded", scaleCanvas);
-window.addEventListener("load", scaleCanvas);
-window.addEventListener("resize", scaleCanvas);
-window.addEventListener("orientationchange", scaleCanvas);
+document.addEventListener("DOMContentLoaded", () => scaleCanvas());
+window.addEventListener("load", () => scaleCanvas());
+window.addEventListener("resize", () => scaleCanvas());
+window.addEventListener("orientationchange", () => scaleCanvas());
