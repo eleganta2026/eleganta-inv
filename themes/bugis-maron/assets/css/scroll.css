@@ -1,4 +1,5 @@
 .scroll-ornament-from-top-left,
+.scroll-ornament-from-top-right,
 .scroll-ornament-from-bottom-left,
 .scroll-ornament-from-bottom-right,
 .scroll-ornament-from-top,
@@ -24,6 +25,11 @@
 .scroll-ornament-from-top-left.is-visible {
     visibility: visible;
     animation: ornamentSlideFromTopLeft 1s ease-out var(--delay, 0.75s) forwards;
+}
+
+.scroll-ornament-from-top-right.is-visible {
+    visibility: visible;
+    animation: ornamentSlideFromTopRight 1s ease-out var(--delay, 0.75s) forwards;
 }
 
 .scroll-ornament-from-bottom-left.is-visible {

@@ -2,7 +2,6 @@
     id="event-detail"
     class="page-section relative h-full w-full text-center">
     <div class="section-scroll">
-
         <img
             src="<?= theme_asset($theme, 'img/bg.webp') ?>"
             class="absolute top-0 z-0 h-full w-full object-cover scale-y-[-1] scale-x-[-1]"
@@ -21,7 +20,7 @@
             class="absolute z-20 top-[950px] -left-[150px] w-[445px] h-[290px] overflow-hidden scroll-ornament-zoom-in-umbrella">
             <img
                 src="<?= theme_asset($theme, 'img/event-detail/ornamen-payung-kecil.webp') ?>"
-                class="w-[446px] max-w-none"
+                class="w-[446px] max-w-none animate-pulse-umbrella"
                 alt="ornamen payung kecil">
         </div>
 

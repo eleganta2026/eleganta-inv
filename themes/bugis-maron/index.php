@@ -14,7 +14,10 @@ if (!isset($data)) {
 
     <title>The Wedding of Iqbal & Fika</title>
 
+    <link rel="icon" href="https://eleganta.id/favicon.ico" sizes="any">
+
     <link rel="stylesheet" href="<?= inv_asset('css/style.css') ?>">
+    <link rel="stylesheet" href="<?= theme_asset($theme, 'css/hero.css') ?>">
 
     <link rel="stylesheet" href="<?= theme_asset($theme, 'css/keyframes.css') ?>">
     <link rel="stylesheet" href="<?= theme_asset($theme, 'css/scroll.css') ?>">
@@ -30,58 +33,73 @@ if (!isset($data)) {
 </head>
 
 <body>
-    <div class="swipe-hint opacity-0 transition-opacity duration-500 pointer-events-none fixed inset-0 z-99999 flex justify-center">
-        <div class="relative h-full w-full max-w-113.5">
-            <video
-                class="absolute top-1/2 -right-5 w-25 -translate-y-1/2 -rotate-90 -scale-x-100 object-cover"
-                autoplay
-                muted
-                loop
-                playsinline>
-                <source src="<?= theme_asset($theme, 'swipe.webm') ?>" type="video/webm">
-            </video>
+    <?php
+    $loadingFile = __DIR__ . "/sections/loading.php";
+
+    if (file_exists($loadingFile)) {
+        include $loadingFile;
+    }
+    ?>
+
+    <div
+        id="invitationApp"
+        class="opacity-0 pointer-events-none transition-opacity duration-700 ease-out">
+
+        <div class="swipe-hint opacity-0 transition-opacity duration-500 pointer-events-none fixed inset-0 z-99999 flex justify-center">
+            <div class="relative h-full w-full max-w-113.5">
+                <video
+                    class="absolute top-1/2 -right-5 w-25 -translate-y-1/2 -rotate-90 -scale-x-100 object-cover"
+                    autoplay
+                    muted
+                    loop
+                    playsinline>
+                    <source src="<?= theme_asset($theme, 'swipe.webm') ?>" type="video/webm">
+                </video>
+            </div>
+        </div>
+
+        <div id="viewport" class="viewport">
+            <div id="viewportBg" class="viewport-bg"></div>
+            <div id="viewportOverlay" class="viewport-overlay"></div>
+
+            <?php
+            $coverFile = __DIR__ . "/sections/cover.php";
+
+            if (file_exists($coverFile)) {
+                include $coverFile;
+            }
+            ?>
+
+            <main id="app" class="canvas">
+                <?php
+                $sections = $data['sections'] ?? [
+                    'hero',
+                    'quotes',
+                    'couple',
+                    'story',
+                    'gallery',
+                    'video',
+                    'event-detail',
+                    'countdown',
+                    'maps',
+                    'gift',
+                    'wishes',
+                    'closing',
+                ];
+
+                foreach ($sections as $s) {
+                    $file = __DIR__ . "/sections/{$s}.php";
+
+                    if (file_exists($file)) {
+                        include $file;
+                    }
+                }
+                ?>
+            </main>
         </div>
     </div>
 
-    <div id="viewport" class="viewport">
-        <div id="viewportBg" class="viewport-bg"></div>
-        <div id="viewportOverlay" class="viewport-overlay"></div>
-
-        <?php
-        $coverFile = __DIR__ . "/sections/cover.php";
-
-        if (file_exists($coverFile)) {
-            include $coverFile;
-        }
-        ?>
-
-        <main id="app" class="canvas">
-            <?php
-            $sections = $data['sections'] ?? [
-                'hero',
-                'quotes',
-                'couple',
-                'story',
-                'gallery',
-                'video',
-                'event-detail',
-                'countdown',
-                'maps',
-                'gift',
-                'wishes',
-                'closing',
-            ];
-
-            foreach ($sections as $s) {
-                $file = __DIR__ . "/sections/{$s}.php";
-
-                if (file_exists($file)) {
-                    include $file;
-                }
-            }
-            ?>
-        </main>
-    </div>
+    <script src="<?= inv_asset('js/loading.js') ?>"></script>
 
     <script>
         window.activeSections = <?= json_encode($sections) ?>;

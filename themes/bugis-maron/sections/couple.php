@@ -14,7 +14,7 @@
             class="absolute -top-[36px] -left-[45px] z-0 h-[105px] max-w-none scroll-ornament-from-top"
             alt="ornamen abstrak" />
 
-        <div class="absolute top-[500px] -left-[20px] z-20 w-[177px] scroll-ornament-from-bottom-left">
+        <div class="absolute top-[530px] -left-[20px] z-20 w-[190px] scroll-ornament-from-bottom-left">
             <img
                 src="<?= theme_asset($theme, 'img/couple/bunga-kiri-sedang.webp') ?>"
                 class="animate-sway-bottom-left"
@@ -28,7 +28,7 @@
                 alt="bunga kiri kecil" />
         </div>
 
-        <div class="absolute top-[415px] left-[226px] z-20 w-[237px] scroll-ornament-from-bottom-right">
+        <div class="absolute top-[430px] left-[225px] z-20 w-[250px] scroll-ornament-from-top-right">
             <img
                 src="<?= theme_asset($theme, 'img/couple/bunga-kanan-kecil.webp') ?>"
                 class="animate-sway-bottom-right"
@@ -38,10 +38,10 @@
         <div
             data-threshold="0.3"
             style="--delay: 0s;"
-            class="absolute top-[772px] left-[183px] z-20 w-[323px] scroll-ornament-from-bottom-right">
+            class="absolute top-[820px] left-[180px] z-20 w-[323px] h-[290px] overflow-hidden scroll-ornament-from-top-right">
             <img
                 src="<?= theme_asset($theme, 'img/couple/bunga-kanan-besar.webp') ?>"
-                class="animate-sway-bottom-right"
+                class="animate-sway-bottom-right w-[323px]"
                 alt="bunga kanan besar" />
         </div>
 
@@ -53,11 +53,33 @@
             <div class="border-1 w-[320px] absolute right-0 -mt-2 scroll-text-from-top"></div>
 
             <div class="flex justify-start mt-[48px] gap-5">
-                <div class="w-[155px] h-[215] shrink-0 outline outline-7 outline-[#660000] p-1.5 scroll-text-from-left">
-                    <img
-                        src="<?= inv_asset('img/iqbal.jpeg') ?>"
-                        class="w-full h-full object-cover"
-                        alt="Foto Groom" />
+                <div class="shrink-0 scroll-text-from-left">
+                    <div class="w-[155px] h-[215px] outline outline-7 outline-[#660000] p-1.5">
+                        <img
+                            src="<?= inv_asset('img/iqbal.jpeg') ?>"
+                            class="w-full h-full object-cover"
+                            alt="Foto Groom" />
+                    </div>
+
+                    <a
+                        href="https://www.instagram.com/username"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-4 mx-auto flex w-fit items-center justify-center gap-1 rounded-full bg-[#6D1212] px-4 py-2 text-[#FFE9C7] transition duration-300 hover:bg-[#5A0D0D] active:scale-95 animate-pulse-button">
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="w-3.5 h-3.5">
+                            <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.5A4.26 4.26 0 0 0 3.5 7.75v8.5a4.26 4.26 0 0 0 4.25 4.25h8.5a4.26 4.26 0 0 0 4.25-4.25v-8.5a4.26 4.26 0 0 0-4.25-4.25h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-2a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z" />
+                        </svg>
+
+                        <span class="font-inria text-[13px] leading-none">
+                            Instagram
+                        </span>
+                    </a>
+
                 </div>
 
                 <div class="text-left -mt-3 scroll-text-from-right">
@@ -77,7 +99,7 @@
             <div class="flex justify-end mt-[170px] gap-5">
                 <div
                     data-threshold="0.5"
-                    style="--delay: 1s;"
+                    style="--delay: 0s;"
                     class="text-right -mt-3 scroll-text-from-left">
                     <p
                         class="font-kaisei font-bold text-[24px] leading-[27px]">
@@ -93,11 +115,32 @@
                 <div
                     data-threshold="0.5"
                     style="--delay: 0s;"
-                    class="w-[155px] h-[215] shrink-0 outline outline-7 outline-[#660000] p-1.5 scroll-text-from-right">
-                    <img
-                        src="<?= inv_asset('img/fika.jpeg') ?>"
-                        class="w-full h-full object-cover"
-                        alt="Foto Groom" />
+                    class="shrink-0 scroll-text-from-right">
+                    <div class="w-[155px] h-[215px] outline outline-7 outline-[#660000] p-1.5">
+                        <img
+                            src="<?= inv_asset('img/fika.jpeg') ?>"
+                            class="w-full h-full object-cover"
+                            alt="Foto Groom" />
+                    </div>
+
+                    <a
+                        href="https://www.instagram.com/username"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-4 mx-auto flex w-fit items-center justify-center gap-1 rounded-full bg-[#6D1212] px-4 py-2 text-[#FFE9C7] transition duration-300 hover:bg-[#5A0D0D] active:scale-95 animate-pulse-button">
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="w-3.5 h-3.5">
+                            <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.5A4.26 4.26 0 0 0 3.5 7.75v8.5a4.26 4.26 0 0 0 4.25 4.25h8.5a4.26 4.26 0 0 0 4.25-4.25v-8.5a4.26 4.26 0 0 0-4.25-4.25h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-2a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z" />
+                        </svg>
+
+                        <span class="font-inria text-[13px] leading-none">
+                            Instagram
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>

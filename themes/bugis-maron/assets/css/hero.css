@@ -1,0 +1,505 @@
+#hero .hero-house {
+    bottom: -75rem;
+    width: 6000px;
+    transform: translateX(-50%);
+    opacity: 1;
+    will-change: bottom, width;
+}
+
+#hero.active .hero-house {
+    animation: heroHouseToBottom 2.2s cubic-bezier(0.76, 0, 0.24, 1) 0.6s both;
+}
+
+@keyframes heroHouseToBottom {
+    from {
+        bottom: -75rem;
+        width: 6000px;
+        transform: translateX(-50%);
+    }
+
+    to {
+        bottom: 0;
+        width: 400px;
+        transform: translateX(-50%);
+    }
+}
+
+#hero .hero-door-left,
+#hero .hero-door-right {
+    will-change: transform;
+}
+
+#hero .hero-door-left {
+    transform: translateX(-32%);
+}
+
+#hero .hero-door-right {
+    transform: translateX(32%);
+}
+
+#hero.active .hero-door-left {
+    animation: heroDoorLeftOpen 1.8s cubic-bezier(0.76, 0, 0.24, 1) 0.6s both;
+}
+
+#hero.active .hero-door-right {
+    animation: heroDoorRightOpen 1.8s cubic-bezier(0.76, 0, 0.24, 1) 0.6s both;
+}
+
+@keyframes heroDoorLeftOpen {
+    from {
+        transform: translateX(-32%);
+    }
+
+    to {
+        transform: translateX(-115%);
+    }
+}
+
+@keyframes heroDoorRightOpen {
+    from {
+        transform: translateX(32%);
+    }
+
+    to {
+        transform: translateX(115%);
+    }
+}
+
+#hero .hero-top-ornament {
+    opacity: 0;
+    filter: blur(2px);
+    will-change: transform, opacity, filter;
+}
+
+#hero .hero-top-ornament-left {
+    transform: translate(-90px, -90px) scale(0.85);
+}
+
+#hero .hero-top-ornament-right {
+    transform: translate(90px, -90px) scale(0.85);
+}
+
+#hero.active .hero-top-ornament-left {
+    animation:
+        heroTopOrnamentLeftIn 2s cubic-bezier(0.22, 1, 0.36, 1) 4.5s both,
+        heroTopOrnamentSwayLeft 6.2s ease-in-out 6.7s infinite;
+}
+
+#hero.active .hero-top-ornament-right {
+    animation:
+        heroTopOrnamentRightIn 2s cubic-bezier(0.22, 1, 0.36, 1) 4.5s both,
+        heroTopOrnamentSwayRight 6.4s ease-in-out 6.7s infinite;
+}
+
+@keyframes heroTopOrnamentLeftIn {
+    from {
+        opacity: 0;
+        transform: translate(-90px, -90px) scale(0.85);
+        filter: blur(2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes heroTopOrnamentRightIn {
+    from {
+        opacity: 0;
+        transform: translate(90px, -90px) scale(0.85);
+        filter: blur(2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+        filter: blur(0);
+    }
+}
+
+#hero .hero-main-ornament {
+    opacity: 0;
+    transform: translateY(-180px) scale(0.96);
+    transform-origin: top center;
+    filter: blur(2px);
+    will-change: transform, opacity, filter;
+}
+
+#hero.active .hero-main-ornament {
+    animation: heroMainOrnamentDrop 2s cubic-bezier(0.22, 1, 0.36, 1) 5.1s both;
+}
+
+@keyframes heroMainOrnamentDrop {
+    from {
+        opacity: 0;
+        transform: translateY(-180px) scale(0.96);
+        filter: blur(2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+#hero .hero-stem {
+    opacity: 0;
+    transform: scale(0.2) translateY(60px);
+    transform-origin: bottom center;
+    filter: blur(4px);
+    will-change: transform, opacity, filter;
+}
+
+#hero.active .hero-stem-left {
+    animation:
+        heroStemGrow 2s cubic-bezier(0.22, 1, 0.36, 1) 3s both,
+        heroStemSwayLeft 5.8s ease-in-out 5.2s infinite;
+}
+
+#hero.active .hero-stem-right {
+    animation:
+        heroStemGrow 2s cubic-bezier(0.22, 1, 0.36, 1) 3s both,
+        heroStemSwayRight 6s ease-in-out 5.2s infinite;
+}
+
+@keyframes heroStemGrow {
+    from {
+        opacity: 0;
+        transform: scale(0.2) translateY(60px);
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+#hero .hero-flower-side {
+    opacity: 0;
+    transform: scale(0.25) translateY(50px);
+    transform-origin: bottom center;
+    filter: blur(2px);
+    will-change: transform, opacity, filter;
+}
+
+#hero.active .hero-flower-left {
+    animation:
+        heroFlowerBloom 2s cubic-bezier(0.22, 1, 0.36, 1) 3.3s both,
+        heroFlowerSwayLeft 5s ease-in-out 5.4s infinite;
+}
+
+#hero.active .hero-flower-right {
+    animation:
+        heroFlowerBloom 2s cubic-bezier(0.22, 1, 0.36, 1) 3.3s both,
+        heroFlowerSwayRight 5.2s ease-in-out 5.4s infinite;
+}
+
+@keyframes heroFlowerBloom {
+    from {
+        opacity: 0;
+        transform: scale(0.25) translateY(50px);
+        filter: blur(2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+#hero .hero-flower-bottom {
+    opacity: 0;
+    transform: scale(0.2) translateY(45px);
+    transform-origin: bottom center;
+    filter: blur(2px);
+    will-change: transform, opacity, filter;
+}
+
+#hero.active .hero-flower-bottom-left {
+    animation:
+        heroBottomFlowerBloom 2s cubic-bezier(0.22, 1, 0.36, 1) 3.6s both,
+        heroFlowerSwayLeft 5.4s ease-in-out 5.8s infinite;
+}
+
+#hero.active .hero-flower-bottom-right {
+    animation:
+        heroBottomFlowerBloom 2s cubic-bezier(0.22, 1, 0.36, 1) 3.6s both,
+        heroFlowerSwayRight 5.6s ease-in-out 5.8s infinite;
+}
+
+@keyframes heroBottomFlowerBloom {
+    from {
+        opacity: 0;
+        transform: scale(0.2) translateY(45px);
+        filter: blur(2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+#hero .hero-corner-bottom {
+    opacity: 0;
+    transform: scale(0.25) translateY(55px);
+    transform-origin: bottom center;
+    filter: blur(2px);
+    will-change: transform, opacity, filter;
+}
+
+#hero.active .hero-corner-bottom-left {
+    animation:
+        heroCornerBottomBloom 2s cubic-bezier(0.22, 1, 0.36, 1) 3.9s both,
+        heroFlowerSwayLeft 5.8s ease-in-out 6.1s infinite;
+}
+
+#hero.active .hero-corner-bottom-right {
+    animation:
+        heroCornerBottomBloom 2s cubic-bezier(0.22, 1, 0.36, 1) 3.9s both,
+        heroFlowerSwayRight 6s ease-in-out 6.1s infinite;
+}
+
+@keyframes heroCornerBottomBloom {
+    from {
+        opacity: 0;
+        transform: scale(0.25) translateY(55px);
+        filter: blur(2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+#hero .hero-cloud {
+    opacity: 0;
+    transform: translateX(0) scale(0.75);
+    transform-origin: center center;
+    filter: blur(8px);
+    will-change: transform, opacity, filter;
+}
+
+#hero.active .hero-cloud {
+    animation:
+        heroCloudAppear 1.5s ease-out 2s both,
+        heroCloudLoop 30s ease-in-out 3.5s infinite;
+}
+
+@keyframes heroCloudAppear {
+    from {
+        opacity: 0;
+        transform: translateX(0) scale(0.75);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes heroCloudLoop {
+    0% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+    }
+
+    35% {
+        opacity: 1;
+        transform: translateX(-100px) scale(1);
+        filter: blur(0);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateX(60px) scale(1);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+#hero .hero-title-small,
+#hero .hero-title-name {
+    opacity: 0;
+    filter: blur(4px);
+    will-change: transform, opacity, filter, letter-spacing;
+}
+
+#hero .hero-title-small {
+    transform: translateY(18px) scale(0.96);
+}
+
+#hero .hero-title-name {
+    transform: translateY(28px) scale(0.94);
+    letter-spacing: 0.08em;
+}
+
+#hero.active .hero-title-small {
+    animation: heroTitleSmallIn 1s ease-out 6s both;
+}
+
+#hero.active .hero-title-name {
+    animation: heroTitleNameIn 1.25s cubic-bezier(0.22, 1, 0.36, 1) 6.25s both;
+}
+
+@keyframes heroTitleSmallIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.96);
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes heroTitleNameIn {
+    from {
+        opacity: 0;
+        transform: translateY(28px) scale(0.94);
+        letter-spacing: 0.08em;
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        letter-spacing: 0;
+        filter: blur(0);
+    }
+}
+
+
+@keyframes heroFlowerSwayLeft {
+    0%,
+    100% {
+        transform: scale(1) translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1) translateY(-1px) rotate(-1.2deg);
+    }
+
+    50% {
+        transform: scale(1) translateY(0.5px) rotate(0.8deg);
+    }
+
+    75% {
+        transform: scale(1) translateY(-0.5px) rotate(-0.5deg);
+    }
+}
+
+@keyframes heroFlowerSwayRight {
+    0%,
+    100% {
+        transform: scale(1) translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1) translateY(-1px) rotate(1.2deg);
+    }
+
+    50% {
+        transform: scale(1) translateY(0.5px) rotate(-0.8deg);
+    }
+
+    75% {
+        transform: scale(1) translateY(-0.5px) rotate(0.5deg);
+    }
+}
+
+@keyframes heroStemSwayLeft {
+    0%,
+    100% {
+        transform: scale(1) translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1) translateY(-0.5px) rotate(-0.8deg);
+    }
+
+    50% {
+        transform: scale(1) translateY(0.5px) rotate(0.5deg);
+    }
+
+    75% {
+        transform: scale(1) translateY(-0.5px) rotate(-0.3deg);
+    }
+}
+
+@keyframes heroStemSwayRight {
+    0%,
+    100% {
+        transform: scale(1) translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1) translateY(-0.5px) rotate(0.8deg);
+    }
+
+    50% {
+        transform: scale(1) translateY(0.5px) rotate(-0.5deg);
+    }
+
+    75% {
+        transform: scale(1) translateY(-0.5px) rotate(0.3deg);
+    }
+}
+
+@keyframes heroTopOrnamentSwayLeft {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-0.5px, -1px) scale(1) rotate(-0.9deg);
+    }
+
+    50% {
+        transform: translate(0.5px, 0.5px) scale(1) rotate(0.6deg);
+    }
+
+    75% {
+        transform: translate(-0.5px, 0) scale(1) rotate(-0.4deg);
+    }
+}
+
+@keyframes heroTopOrnamentSwayRight {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(0.5px, -1px) scale(1) rotate(0.9deg);
+    }
+
+    50% {
+        transform: translate(-0.5px, 0.5px) scale(1) rotate(-0.6deg);
+    }
+
+    75% {
+        transform: translate(0.5px, 0) scale(1) rotate(0.4deg);
+    }
+}

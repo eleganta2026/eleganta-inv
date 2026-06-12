@@ -8,6 +8,8 @@ let swipeHints = [];
 let idleTimer = null;
 
 const sectionOrder = window.activeSections || [];
+const isRepairMode =
+  new URLSearchParams(window.location.search).get("repair") === "1";
 
 function showSwipeHints() {
   swipeHints.forEach((el) => {
@@ -33,7 +35,7 @@ function resetIdleTimer() {
     if (isOpened && !isAnimating) {
       showSwipeHints();
     }
-  }, 5000);
+  }, 10000);
 }
 
 function goTo(index) {
@@ -216,6 +218,42 @@ function initScrollAnimations(section) {
   section.dataset.scrollReady = "true";
 }
 
+function openDirectToHero() {
+  const cover = document.getElementById("cover");
+  const app = document.getElementById("app");
+  const hero = document.getElementById(sectionOrder[0]);
+
+  if (!app || !hero) return;
+
+  isOpened = true;
+  isAnimating = false;
+  cur = 0;
+
+  hideSwipeHints();
+  clearTimeout(idleTimer);
+
+  if (cover) {
+    cover.style.display = "none";
+    cover.style.pointerEvents = "none";
+  }
+
+  app.style.opacity = "1";
+  app.style.pointerEvents = "auto";
+
+  hero.style.transition = "none";
+  hero.style.transform = "translateY(0%)";
+  hero.style.opacity = "1";
+  hero.style.pointerEvents = "auto";
+  hero.classList.add("active");
+
+  initScrollAnimations(hero);
+  updateViewportBg(hero);
+  updateViewportBackground(hero);
+  scaleCanvas(hero);
+
+  resetIdleTimer();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const app = document.getElementById("app");
 
@@ -227,6 +265,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   requestAnimationFrame(() => {
     app.classList.add("is-ready");
+
+    if (isRepairMode) {
+      openDirectToHero();
+    }
   });
 });
 

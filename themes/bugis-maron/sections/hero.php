@@ -5,85 +5,107 @@
     class="page-section relative h-full w-full text-center">
 
     <img
-        src="<?= theme_asset($theme, 'img/hero/ornamen-atas.webp') ?>"
-        class="absolute z-0 -top-[82px] -left-[110px] w-[403px]"
-        alt="ornamen atas kiri" />
+        src="<?= theme_asset($theme, 'img/hero/rumah.webp') ?>"
+        class="hero-house absolute z-0 left-1/2 max-w-none"
+        alt="ornamen besar" />
 
-    <img
-        src="<?= theme_asset($theme, 'img/hero/ornamen-atas.webp') ?>"
-        class="absolute z-0 -top-[44px] left-[159px] w-[403px] -scale-x-100"
-        alt="ornamen atas kanan" />
+    <div class="hero-door-left absolute z-20 bottom-0 left-0 h-full">
+        <img
+            src="<?= theme_asset($theme, 'img/hero/pintu.webp') ?>"
+            class="h-full max-w-none block"
+            alt="pintu kiri" />
+    </div>
+
+    <div class="hero-door-right absolute z-20 bottom-0 right-0 h-full">
+        <img
+            src="<?= theme_asset($theme, 'img/hero/pintu.webp') ?>"
+            class="h-full max-w-none block -scale-x-100"
+            alt="pintu kanan" />
+    </div>
+
+    <div class="hero-top-ornament hero-top-ornament-left absolute z-0 -top-20.5 -left-27.5 w-[403px]">
+        <img
+            src="<?= theme_asset($theme, 'img/hero/ornamen-atas.webp') ?>"
+            class="w-full block"
+            alt="ornamen atas kiri" />
+    </div>
+
+    <div class="hero-top-ornament hero-top-ornament-right absolute z-0 -top-20.5 left-37.5 w-[403px]">
+        <img
+            src="<?= theme_asset($theme, 'img/hero/ornamen-atas.webp') ?>"
+            class="w-full block -scale-x-100"
+            alt="ornamen atas kanan" />
+    </div>
 
     <img
         src="<?= theme_asset($theme, 'img/hero/ornamen-besar.webp') ?>"
-        class="absolute z-0 -top-[69px] -left-[53px] w-[546px] max-w-none animate-ornament-from-right"
+        class="hero-main-ornament absolute z-0 -top-[24px] -left-[28px] w-[465px] max-w-none"
         alt="ornamen besar" />
 
-    <img
-        src="<?= theme_asset($theme, 'img/hero/ornamen-tangkai-bawah.webp') ?>"
-        class="absolute z-0 top-[506px] -left-[95px] w-[282px]"
-        alt="ornamen tangkai bawah kiri" />
+    <div class="hero-stem hero-stem-left absolute z-0 top-[506px] -left-[95px] w-[282px]">
+        <img
+            src="<?= theme_asset($theme, 'img/hero/ornamen-tangkai-bawah.webp') ?>"
+            class="w-full block"
+            alt="ornamen tangkai bawah kiri" />
+    </div>
 
-    <img
-        src="<?= theme_asset($theme, 'img/hero/ornamen-tangkai-bawah.webp') ?>"
-        class="absolute z-0 top-[513px] left-[172px] w-[282px] -rotate-[7deg]"
-        alt="ornamen tangkai bawah kanan" />
+    <div class="hero-stem hero-stem-right absolute z-0 top-[513px] left-[172px] w-[282px]">
+        <img
+            src="<?= theme_asset($theme, 'img/hero/ornamen-tangkai-bawah.webp') ?>"
+            class="w-full block -rotate-[7deg]"
+            alt="ornamen tangkai bawah kanan" />
+    </div>
 
     <img
         src="<?= theme_asset($theme, 'img/hero/ornamen-bunga-kiri.webp') ?>"
-        class="absolute z-0 top-[368px] -left-[119px] w-[305px]"
+        class="hero-flower-side hero-flower-left absolute z-0 top-[368px] -left-[119px] w-[305px]"
         alt="ornamen bunga kiri" />
 
     <img
         src="<?= theme_asset($theme, 'img/hero/ornamen-bunga-kanan.webp') ?>"
-        class="absolute z-0 top-[366px] left-[196px] w-[331px]"
+        class="hero-flower-side hero-flower-right absolute z-0 top-[366px] left-[196px] w-[331px]"
         alt="ornamen bunga kanan" />
 
     <img
-        src="<?= theme_asset($theme, 'img/ornamen-bawah-sudut.webp') ?>"
-        class="absolute z-0 top-[453px] -left-[119px] w-[273px]"
-        alt="ornamen bawah sudut kiri" />
-
-    <img
         src="<?= theme_asset($theme, 'img/hero/ornamen-bunga-bawah.webp') ?>"
-        class="absolute z-0 top-[592px] left-[154px] w-[272px] -rotate-[2deg]"
-        alt="ornamen bunga bawah kanan" />
-
-    <img
-        src="<?= theme_asset($theme, 'img/ornamen-bawah-sudut.webp') ?>"
-        class="absolute z-0 top-[453px] left-[254px] w-[273px] -scale-x-100"
-        alt="ornamen bawah sudut kanan" />
-
-    <img
-        src="<?= theme_asset($theme, 'img/hero/ornamen-bunga-bawah.webp') ?>"
-        class="absolute z-0 top-[578px] -left-[43px] w-[272px]"
+        class="hero-flower-bottom hero-flower-bottom-left absolute z-0 top-[580px] -left-[36px] w-[270px]"
         alt="ornamen bunga bawah kiri" />
 
     <img
+        src="<?= theme_asset($theme, 'img/hero/ornamen-bunga-bawah.webp') ?>"
+        class="hero-flower-bottom hero-flower-bottom-right absolute z-0 top-[580px] -right-[46px] w-[270px]"
+        alt="ornamen bunga bawah kanan" />
+
+    <div class="hero-corner-bottom hero-corner-bottom-left absolute z-0 top-[450px] -left-[110px] w-[275px]">
+        <img
+            src="<?= theme_asset($theme, 'img/ornamen-bawah-sudut.webp') ?>"
+            class="w-full block"
+            alt="ornamen bawah sudut kiri" />
+    </div>
+
+    <div class="hero-corner-bottom hero-corner-bottom-right absolute z-0 top-[450px] left-[250px] w-[275px]">
+        <img
+            src="<?= theme_asset($theme, 'img/ornamen-bawah-sudut.webp') ?>"
+            class="w-full block -scale-x-100"
+            alt="ornamen bawah sudut kanan" />
+    </div>
+
+    <img
         src="<?= theme_asset($theme, 'img/awan.webp') ?>"
-        class="absolute z-0 top-[254px] left-0 w-[701px] max-w-none"
+        class="hero-cloud absolute z-0 top-[254px] left-0 w-[701px] max-w-none"
         alt="awan" />
 
-
-    <div class="absolute top-65.5 left-1/2 z-10 w-full -translate-x-1/2 px-4">
-        <p class="font-imperial text-[40px] text-[#6D1212]">
+    <div class="absolute top-[256px] left-1/2 z-10 w-full -translate-x-1/2 px-4">
+        <p class="hero-title-small font-imperial text-[40px] text-[#6D1212]">
             The Wedding Of
         </p>
 
-        <p class="font-kaisei font-bold text-[36px] text-[#6D1212] leading-11.5">
+        <p class="hero-title-name font-kaisei font-bold text-[36px] text-[#6D1212] leading-11.5 -mt-2">
             IQBAL
             <br>
             &
             <br>
             FIKA
-        </p>
-
-        <p class="font-inria text-[12px] text-[#6D1212] mt-5.5">
-            Kepada Bpk / Ibu / Saudara(i)
-        </p>
-
-        <p class="font-inria font-bold text-[18px] mx-auto max-w-[240px] text-[#6D1212] mt-2.5">
-            Fadlullah Heri Farid S.Kom.
         </p>
     </div>
 </section>

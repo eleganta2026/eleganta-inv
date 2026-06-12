@@ -75,6 +75,8 @@
                 <p class="font-inria font-bold text-[16px]">
                     Jl. Jend. Sudirman No.1 Kota Parepare
                 </p>
+
+                <button class="bg-[#6D1212] font-inria text-[12px] font-bold text-[#FFC8AA] px-2 py-2.5 rounded-[10px] mt-2 animate-pulse-button w-fit mx-auto">Salin Alamat</button>
             </div>
         </div>
 
